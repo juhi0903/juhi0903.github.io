@@ -1,0 +1,16 @@
+.contact-section {
+    display: flex;
+    padding: 5px;
+
+    .icon {
+        flex: 1;
+
+        .skill-logo {
+            width: 15px;
+        }
+    }
+
+    .content {
+        flex: 5;
+    }
+}
