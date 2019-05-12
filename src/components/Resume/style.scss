@@ -1,93 +1,88 @@
 .resume-wrapper {
-    margin: 0px 0px;
-    background: white;
-    width: 794px;
-    height: 110vh;
+	margin: 0px 0px;
+	background: white;
+	width: 794px;
+	// height: 110vh;
 
+	.resume-header {
+		height: 20px;
+		width: 100%;
+		background: black;
+	}
 
-    .resume-header {
-        height: 20px;
-        width: 100%;
-        background: black;
-    }
+	.resume-title {
+		font-size: 30px;
+		padding: 20px;
+		padding-top: 40px;
+		text-align: center;
+		line-height: 35px;
+		letter-spacing: 6px;
 
-    .resume-title {
-        font-size: 30px;
-        padding: 20px;
-        padding-top: 40px;
-        text-align: center;
-        line-height: 35px;
-        letter-spacing: 6px;
+		.resume-subtitle {
+			font-size: 15px;
+			letter-spacing: 2px;
+		}
+	}
 
-        .resume-subtitle {
-            font-size: 15px;
-            letter-spacing: 2px;
+	.resume-section {
+		margin-bottom: 40px;
+	}
 
-        }
-    }
+	.resume-content {
+		display: flex;
+		flex-direction: row;
+		padding: 30px;
+		padding-top: 20px;
 
-    .resume-section {
-        margin-bottom: 40px;
-    }
+		.resume-section-title {
+			letter-spacing: 3px;
+			font-size: 14px;
+		}
 
-    .resume-content {
-        display: flex;
-        flex-direction: row;
-        padding: 30px;
-        padding-top: 20px;
+		.horizontal-line {
+			height: 1px;
+			border: 1px solid #dedede;
+			width: 80%;
+			margin-top: 10px;
+		}
 
-        .resume-section-title {
-            letter-spacing: 3px;
-            font-size: 14px;
-        }
+		.resume-section-content {
+			padding-top: 20px;
+			font-size: 12px;
+		}
 
-        .horizontal-line {
-            height: 1px;
-            border: 1px solid #dedede;
-            width: 80%;
-            margin-top: 10px
-        }
+		.text-section {
+			display: flex;
+			padding: 5px;
+			flex-direction: column;
 
-        .resume-section-content {
-            padding-top: 20px;
-            font-size: 12px;
-        }
+			.title {
+				color: #bebebe;
+				letter-spacing: 2px;
+				padding-bottom: 10px;
 
+				.sub-title {
+					font-size: 10px;
+				}
+			}
 
+			.content {
+				font-size: 10px;
+				width: 85%;
+				line-height: 2;
+				text-align: justify;
+				padding-bottom: 10px;
+			}
+		}
 
-        .text-section {
-            display: flex;
-            padding: 5px;
-            flex-direction: column;
+		.left-content {
+			flex: 2;
+			border-right: 1px solid black;
+		}
 
-            .title {
-                color: #bebebe;
-                letter-spacing: 2px;
-                padding-bottom: 10px;
-
-                .sub-title {
-                    font-size: 10px;
-                }
-            }
-
-            .content {
-                font-size: 10px;
-                width: 85%;
-                line-height: 2;
-                text-align: justify;
-                padding-bottom: 10px;
-            }
-
-        }
-
-        .left-content {
-            flex: 2;
-            border-right: 1px solid black;
-        }
-
-        .right-content {
-            flex: 4;
-            margin-left: 20px
-        }
-    }
+		.right-content {
+			flex: 4;
+			margin-left: 20px;
+		}
+	}
 }

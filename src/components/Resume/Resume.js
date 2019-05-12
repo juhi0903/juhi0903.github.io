@@ -4,6 +4,7 @@ import Contact from "./Contact";
 
 import "./style.scss";
 import ProfExperience from "./ProfExperience";
+import Projects from "./Projects";
 import Skills from "./Skills";
 
 const Resume = ({ id }) => {
@@ -40,6 +41,15 @@ const Resume = ({ id }) => {
               <div class="horizontal-line" />
               <div className="resume-section-content">
                 <ProfExperience />
+              </div>
+            </div>
+            <div className="resume-section">
+              <div className="resume-section-title">
+                Projects
+              </div>
+              <div class="horizontal-line" />
+              <div className="resume-section-content">
+                <Projects />
               </div>
             </div>
           </div>
