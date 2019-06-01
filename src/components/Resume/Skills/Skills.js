@@ -1,13 +1,13 @@
-import React from "react";
-import "./style.scss";
-import nodejs from "../../../assets/nodejs.png";
-import html5 from "../../../assets/html5.png";
-import js from "../../../assets/js.png";
-import java from "../../../assets/java.png";
-import angular from "../../../assets/angular.png";
-import sql from "../../../assets/sql.png";
-import react from "../../../assets/react.png";
-import spring from "../../../assets/spring.png";
+import React from 'react';
+import './style.scss';
+import nodejs from '../../../assets/nodejs.png';
+import html5 from '../../../assets/html5.png';
+import js from '../../../assets/js.png';
+import java from '../../../assets/java.png';
+import angular from '../../../assets/angular.png';
+import sql from '../../../assets/sql.png';
+import react from '../../../assets/react.png';
+import spring from '../../../assets/spring.png';
 
 const Skills = () => (
   <div>
@@ -16,7 +16,7 @@ const Skills = () => (
         <img className="skill-logo" src={java} alt="Java8" /> JAVA 8
       </div>
       <div className="progress-wrapper">
-        <div className="progress" style={{ width: "90%" }} />
+        <div className="progress" style={{ width: '90%' }} />
       </div>
     </div>
 
@@ -26,7 +26,7 @@ const Skills = () => (
         JAVASCRIPT
       </div>
       <div className="progress-wrapper">
-        <div className="progress" style={{ width: "70%" }} />
+        <div className="progress" style={{ width: '70%' }} />
       </div>
     </div>
 
@@ -36,18 +36,18 @@ const Skills = () => (
         NODE.JS
       </div>
       <div className="progress-wrapper">
-        <div className="progress" style={{ width: "50%" }} />
+        <div className="progress" style={{ width: '50%' }} />
       </div>
     </div>
 
     <div className="skills-section">
       <div className="content">
-        {" "}
+        {' '}
         <img className="skill-logo" src={angular} alt="Angular" />
         ANGULAR 2/4/6
       </div>
       <div className="progress-wrapper">
-        <div className="progress" style={{ width: "80%" }} />
+        <div className="progress" style={{ width: '80%' }} />
       </div>
     </div>
 
@@ -57,7 +57,7 @@ const Skills = () => (
         FRAMEWORK
       </div>
       <div className="progress-wrapper">
-        <div className="progress" style={{ width: "80%" }} />
+        <div className="progress" style={{ width: '80%' }} />
       </div>
     </div>
 
@@ -67,7 +67,7 @@ const Skills = () => (
         HTML 5 AND CSS
       </div>
       <div className="progress-wrapper">
-        <div className="progress" style={{ width: "95%" }} />
+        <div className="progress" style={{ width: '95%' }} />
       </div>
     </div>
 
@@ -77,7 +77,7 @@ const Skills = () => (
         SQL DATABASE
       </div>
       <div className="progress-wrapper">
-        <div className="progress" style={{ width: "80%" }} />
+        <div className="progress" style={{ width: '80%' }} />
       </div>
     </div>
 
@@ -86,7 +86,7 @@ const Skills = () => (
         <img className="skill-logo" src={react} alt="React" /> REACT FRAMEWORK
       </div>
       <div className="progress-wrapper">
-        <div className="progress" style={{ width: "30%" }} />
+        <div className="progress" style={{ width: '30%' }} />
       </div>
     </div>
   </div>

@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import "./style.scss";
+import './style.scss';
 
 const SocialIcons = (props, context) => {
-  const colorPrimary = "#FFFFFF";
+  const colorPrimary = '#FFFFFF';
   return (
     <div className="social-icons animate-icons">
       <a

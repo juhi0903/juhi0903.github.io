@@ -1,14 +1,14 @@
-import React from "react";
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
-import "./style.scss";
+import React from 'react';
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
+import './style.scss';
 
 const pxToMm = px => {
-  return Math.floor(px / document.getElementById("myMm").offsetHeight);
+  return Math.floor(px / document.getElementById('myMm').offsetHeight);
 };
 
 const mmToPx = mm => {
-  return document.getElementById("myMm").offsetHeight * mm;
+  return document.getElementById('myMm').offsetHeight * mm;
 };
 
 const range = (start, end) => {
@@ -26,7 +26,7 @@ const PrintButton = ({ id, label }) => (
     Getting pixel height in milimeters:
     https://stackoverflow.com/questions/7650413/pixel-to-mm-equation/27111621#27111621
   */}
-    <div id="myMm" style={{ height: "1mm" }} />
+    <div id="myMm" style={{ height: '1mm' }} />
 
     <div
       className="floating-button"
@@ -48,16 +48,16 @@ const PrintButton = ({ id, label }) => (
           numPages,
           range: range(0, numPages),
           comp: inputHeightMm <= a4HeightMm,
-          inputHeightPx: input.offsetHeight
+          inputHeightPx: input.offsetHeight,
         });
 
         html2canvas(input).then(canvas => {
-          const imgData = canvas.toDataURL("image/png");
-          let _pdf = "";
+          const imgData = canvas.toDataURL('image/png');
+          let _pdf = '';
           // Document of a4WidthMm wide and inputHeightMm high
           if (inputHeightMm > a4HeightMm) {
             // elongated a4 (system print dialog will handle page breaks)
-            const pdf = new jsPDF("p", "mm", [inputHeightMm + 16, a4WidthMm]);
+            const pdf = new jsPDF('p', 'mm', [inputHeightMm + 16, a4WidthMm]);
             _pdf = pdf;
           } else {
             const pdf = new jsPDF();
@@ -65,7 +65,7 @@ const PrintButton = ({ id, label }) => (
             // standard a4
           }
 
-          _pdf.addImage(imgData, "PNG", 0, 0);
+          _pdf.addImage(imgData, 'PNG', 0, 0);
           _pdf.save(`${id}.pdf`);
         });
 

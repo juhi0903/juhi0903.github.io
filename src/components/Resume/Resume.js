@@ -1,11 +1,11 @@
-import React from "react";
-import Page from "../Page";
-import Contact from "./Contact";
+import React from 'react';
+import Page from '../Page';
+import Contact from './Contact';
 
-import "./style.scss";
-import ProfExperience from "./ProfExperience";
-import Projects from "./Projects";
-import Skills from "./Skills";
+import './style.scss';
+import ProfExperience from './ProfExperience';
+import Projects from './Projects';
+import Skills from './Skills';
 
 const Resume = ({ id }) => {
   return (
@@ -44,9 +44,7 @@ const Resume = ({ id }) => {
               </div>
             </div>
             <div className="resume-section">
-              <div className="resume-section-title">
-                Projects
-              </div>
+              <div className="resume-section-title">Projects</div>
               <div class="horizontal-line" />
               <div className="resume-section-content">
                 <Projects />

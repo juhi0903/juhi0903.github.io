@@ -1,8 +1,8 @@
-import React from "react";
-import phone from "../../../assets/phone.png";
-import email from "../../../assets/email.png";
-import github from "../../../assets/github.png";
-import "./style.scss";
+import React from 'react';
+import phone from '../../../assets/phone.png';
+import email from '../../../assets/email.png';
+import github from '../../../assets/github.png';
+import './style.scss';
 
 const Contact = () => (
   <div>

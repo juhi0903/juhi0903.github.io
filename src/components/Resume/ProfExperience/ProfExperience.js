@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import "./style.scss";
+import './style.scss';
 
 const ProfExperience = () => (
   <div>
     <div className="text-section">
       <div className="title">
-        GLOBOCOMM PRIVATE LIMITED{" "}
+        GLOBOCOMM PRIVATE LIMITED{' '}
         <span className="sub-title"> (April,2018-Present)</span>
       </div>
       <div className="content">

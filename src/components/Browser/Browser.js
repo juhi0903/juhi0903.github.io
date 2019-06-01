@@ -11,7 +11,7 @@ const getBrowsersArr = () => {
     { name: 'opera', isCurrentBrowser: browserCheck.isOpera() },
     { name: 'ie', isCurrentBrowser: browserCheck.isIE() },
     { name: 'edge', isCurrentBrowser: browserCheck.isEdge() },
-    { name: 'blink', isCurrentBrowser: browserCheck.isBlink() }
+    { name: 'blink', isCurrentBrowser: browserCheck.isBlink() },
   ];
   return browsers;
 };
@@ -26,12 +26,12 @@ const shouldRenderForBrowser = (props, browsers) => {
   const except = props.except === true;
 
   if (except) {
-    allBrowsers.forEach((browser) => {
+    allBrowsers.forEach(browser => {
       if (props[browser]) restrictedBrowsers.push(browser);
       else allowedBrowsers.push(browser);
     });
   } else if (only) {
-    allBrowsers.forEach((browser) => {
+    allBrowsers.forEach(browser => {
       if (props[browser]) allowedBrowsers.push(browser);
       else restrictedBrowsers.push(browser);
     });
@@ -41,7 +41,7 @@ const shouldRenderForBrowser = (props, browsers) => {
   }
 
   const currentBrowser = browsers.find(
-    (browser) => browser.isCurrentBrowser === true
+    browser => browser.isCurrentBrowser === true
   );
   if (currentBrowser && restrictedBrowsers.includes(currentBrowser.name))
     return false;
@@ -50,7 +50,7 @@ const shouldRenderForBrowser = (props, browsers) => {
   else return false;
 };
 
-const Browser = (props) => {
+const Browser = props => {
   const { children } = props;
   const browsers = getBrowsersArr();
   const shouldRender = shouldRenderForBrowser(props, browsers);
@@ -73,7 +73,7 @@ Browser.propTypes = {
   mobile: PropTypes.bool,
   except: PropTypes.bool,
   only: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 Browser.defaultProps = {
@@ -84,7 +84,7 @@ Browser.defaultProps = {
   ie: false,
   edge: false,
   mobile: false,
-  blink: false
+  blink: false,
 };
 
 export default Browser;
