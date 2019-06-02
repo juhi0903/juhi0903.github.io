@@ -12,7 +12,7 @@ const Resume = ({ id }) => {
   return (
     <Page singleMode={false} id={id}>
       <div className="resume-wrapper">
-        <div className="resume-header" />
+        {/* <div className="resume-header" /> */}
         <div className="resume-title">
           JUHI SINGH
           <div className="resume-subtitle">SOFTWARE ENGINEER</div>
