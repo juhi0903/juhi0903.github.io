@@ -8,6 +8,7 @@ const pxToMm = px => {
 };
 
 const mmToPx = mm => {
+  console.log(document.getElementById('myMm').offsetHeight);
   return document.getElementById('myMm').offsetHeight * mm;
 };
 
@@ -51,47 +52,51 @@ const PrintButton = ({ id, label }) => (
           inputHeightPx: input.offsetHeight,
         });
 
-        html2canvas(input).then(canvas => {
+        html2canvas(input, {
+          scale: 1,
+        }).then(canvas => {
+          var context = canvas.getContext('2d');
+          context.scale(2, 2);
+          context['imageSmoothingEnabled'] = false;
+          context['mozImageSmoothingEnabled'] = false;
+          context['oImageSmoothingEnabled'] = false;
+          context['webkitImageSmoothingEnabled'] = false;
+          context['msImageSmoothingEnabled'] = false;
           const imgData = canvas.toDataURL('image/png');
           let _pdf = '';
           // Document of a4WidthMm wide and inputHeightMm high
           if (inputHeightMm > a4HeightMm) {
+            /*
+            *INFO OLD METHOD which broke the code for multiple pages
             // elongated a4 (system print dialog will handle page breaks)
-            const pdf = new jsPDF('p', 'mm', [inputHeightMm + 16, a4WidthMm]);
+            // const pdf = new jsPDF('p', 'mm', [inputHeightMm + 16, a4WidthMm]);
+            // _pdf = pdf;
+            */
+
+            // Reference: https://stackoverflow.com/questions/27045704/how-to-have-multiple-pdf-pages-using-jspdf-with-html2canvas/38788909#38788909
+            var pdf = new jsPDF('p', 'mm');
             _pdf = pdf;
+            var position = 0;
+            var heightLeft = inputHeightMm;
+
+            _pdf.addImage(imgData, 'PNG', 0, position);
+            heightLeft -= a4HeightMm;
+
+            while (heightLeft >= 0) {
+              position = heightLeft - inputHeightMm;
+              _pdf.addPage();
+              _pdf.addImage(imgData, 'PNG', 0, position);
+              heightLeft -= a4HeightMm;
+            }
           } else {
             const pdf = new jsPDF();
             _pdf = pdf;
             // standard a4
           }
 
-          _pdf.addImage(imgData, 'PNG', 0, 0);
+          // _pdf.addImage(imgData, 'PNG', 0, 0);
           _pdf.save(`${id}.pdf`);
         });
-
-        ////////////////////////////////////////////////////////
-        // System to manually handle page breaks
-        // Wasn't able to get it working !
-        // The idea is to break html2canvas screenshots into multiple chunks and stich them together as a pdf
-        // If you get this working, please email me a khuranashivek@outlook.com and I'll update the article
-        ////////////////////////////////////////////////////////
-        // range(0, numPages).forEach((page) => {
-        //   console.log(`Rendering page ${page}. Capturing height: ${a4HeightPx} at yOffset: ${page*a4HeightPx}`);
-        //   html2canvas(input, {height: a4HeightPx, y: page*a4HeightPx})
-        //     .then((canvas) => {
-        //       const imgData = canvas.toDataURL('image/png');
-        //       console.log(imgData)
-        //       if (page > 0) {
-        //         pdf.addPage();
-        //       }
-        //       pdf.addImage(imgData, 'PNG', 0, 0);
-        //     });
-        //   ;
-        // });
-
-        // setTimeout(() => {
-        //   pdf.save(`${id}.pdf`);
-        // }, 5000);
       }}
     >
       {label}

@@ -1,6 +1,7 @@
 import React from 'react';
 import Page from '../Page';
 import Contact from './Contact';
+import Education from './Education';
 
 import './style.scss';
 import ProfExperience from './ProfExperience';
@@ -9,7 +10,7 @@ import Skills from './Skills';
 
 const Resume = ({ id }) => {
   return (
-    <Page singleMode={true} id={id}>
+    <Page singleMode={false} id={id}>
       <div className="resume-wrapper">
         <div className="resume-header" />
         <div className="resume-title">
@@ -20,16 +21,23 @@ const Resume = ({ id }) => {
           <div className="left-content">
             <div className="resume-section">
               <div className="resume-section-title">Contact</div>
-              <div class="horizontal-line" />
+              <div className="horizontal-line" />
               <div className="resume-section-content">
                 <Contact />
               </div>
             </div>
             <div className="resume-section">
               <div className="resume-section-title">Skills</div>
-              <div class="horizontal-line" />
+              <div className="horizontal-line" />
               <div className="resume-section-content">
                 <Skills />
+              </div>
+            </div>
+            <div className="resume-section">
+              <div className="resume-section-title">Education</div>
+              <div className="horizontal-line" />
+              <div className="resume-section-content">
+                <Education />
               </div>
             </div>
           </div>
@@ -38,14 +46,14 @@ const Resume = ({ id }) => {
               <div className="resume-section-title">
                 Professional Experience
               </div>
-              <div class="horizontal-line" />
+              <div className="horizontal-line" />
               <div className="resume-section-content">
                 <ProfExperience />
               </div>
             </div>
             <div className="resume-section">
               <div className="resume-section-title">Projects</div>
-              <div class="horizontal-line" />
+              <div className="horizontal-line" />
               <div className="resume-section-content">
                 <Projects />
               </div>
