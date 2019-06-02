@@ -1,12 +1,14 @@
 {
-  "main.css": "static/css/main.cc30a525.css",
-  "main.css.map": "static/css/main.cc30a525.css.map",
-  "main.js": "static/js/main.48eee95d.js",
-  "main.js.map": "static/js/main.48eee95d.js.map",
+  "main.css": "static/css/main.9994c7b6.css",
+  "main.css.map": "static/css/main.9994c7b6.css.map",
+  "main.js": "static/js/main.71c006bf.js",
+  "main.js.map": "static/js/main.71c006bf.js.map",
+  "static/media/calender.png": "static/media/calender.b535f6eb.png",
   "static/media/github.png": "static/media/github.c8a83d07.png",
   "static/media/html5.png": "static/media/html5.5d6cd40c.png",
   "static/media/java.png": "static/media/java.992d43d2.png",
   "static/media/js.png": "static/media/js.b77c990e.png",
+  "static/media/mybatis.png": "static/media/mybatis.afcabb51.png",
   "static/media/nodejs.png": "static/media/nodejs.55e83371.png",
   "static/media/react.png": "static/media/react.90552fc5.png",
   "static/media/reem-kufi-v4-latin-regular.woff": "static/media/reem-kufi-v4-latin-regular.20e4fd7e.woff",
@@ -15,5 +17,6 @@
   "static/media/roboto-300.woff2": "static/media/roboto-300.c0cc9c92.woff2",
   "static/media/roboto-400.woff2": "static/media/roboto-400.ece6673e.woff2",
   "static/media/roboto-900.woff2": "static/media/roboto-900.2e17a648.woff2",
+  "static/media/spring.png": "static/media/spring.793b3b97.png",
   "static/media/sql.png": "static/media/sql.52346758.png"
 }
