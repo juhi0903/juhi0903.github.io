@@ -6,7 +6,7 @@ const ProfExperience = () => (
   <div>
     <div className="text-section">
       <div className="title">
-        GLOBOCOMM PRIVATE LIMITED{' '}
+        GLOBOCOMM TECHNOLOGIES{' '}
         <span className="sub-title"> (April,2018-Present)</span>
       </div>
       <div className="content">
@@ -35,7 +35,7 @@ const ProfExperience = () => (
         <span className="sub-title">July,2016-Sept,2017)</span>
       </div>
       <div className="content">
-        Associated as an Assitant Systems Engineer for American Express Rewards
+        Associated as an Assistant Systems Engineer for American Express Rewards
         Management Project. Contributed as a part of core team responsible for
         end-to-end release management, design, code and test cases , build and
         review.

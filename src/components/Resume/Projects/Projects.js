@@ -22,9 +22,16 @@ const Projects = () => (
       </div>
       <div className="content">
         <ul>
-          <li>Development of new featuers.</li>
-          <li>Deployment and monitoring.</li>
-          <li>Managing database and access.</li>
+          <li>
+            Migrated the UI of the platform from JSP to Angular 4 (Developed
+            AuthServices, Dialogs, Charts).
+          </li>
+          <li>Development of new features and integrate change-requests.</li>
+          <li>
+            Deployment of UI and Server Application and monitoring of the
+            platform.
+          </li>
+          <li>Managing database and upgrading for new features.</li>
         </ul>
       </div>
       <div className="icon-array">
@@ -42,7 +49,7 @@ const Projects = () => (
           different change requests and the actions taken on them. It managed
           tickets for multiple platforms managed by the operations team of the
           organization. It possesses capabilities to generate report for
-          progress of each tickets and ticket assignment to differnt team
+          progress of each tickets and ticket assignment to different team
           members. As a part of this project, ticket generation directly through
           email was also developed
         </div>
@@ -68,9 +75,9 @@ const Projects = () => (
 
     <div className="text-section">
       <div className="wrapper">
-        <div className="title">KYC VERFICATION APPLICATION</div>
+        <div className="title">KYC VERIFICATION APPLICATION</div>
         <div className="content">
-          Contributed to multiple modules of KYC Verfication, which was used by
+          Contributed to multiple modules of KYC Verification, which was used by
           Telecom Network Vendors during user-registration. This project
           involved modules for customer verification, recharge and other
           retailer utilities. Worked on Logout Module, MSISDN Verification

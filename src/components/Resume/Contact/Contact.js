@@ -2,6 +2,7 @@ import React from 'react';
 import phone from '../../../assets/phone.png';
 import email from '../../../assets/email.png';
 import github from '../../../assets/github.png';
+import location from '../../../assets/location.png';
 import './style.scss';
 
 const Contact = () => (
@@ -23,6 +24,12 @@ const Contact = () => (
         <img className="skill-logo" src={github} alt="Github" />
       </div>
       <div className="content">https://github.com/juhi0903</div>
+    </div>
+    <div className="contact-section">
+      <div className="icon">
+        <img className="skill-logo" src={location} alt="Phone" />
+      </div>
+      <div className="content">Mumbai, Maharashtra, India</div>
     </div>
   </div>
 );
